@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <style>
     *{
          font-family: "Inter", sans-serif;
@@ -16,6 +17,17 @@
 </style>
 </head>
 <body class="bg-blue-100">
+
+<!-- Spinner -->
+<div id="spinner" class="hidden fixed inset-0 flex justify-center items-center bg-white/50 z-50">
+  <div class="flex space-x-2">
+    <span class="dot bg-green-700 w-5 h-5 rounded-full animate-bounce-delay"></span>
+    <span class="dot bg-green-700 w-5 h-5 rounded-full animate-bounce-delay animation-delay-200"></span>
+    <span class="dot bg-green-700 w-5 h-5 rounded-full animate-bounce-delay animation-delay-400"></span>
+  </div>
+</div>
+
+
 
       <header>
         <div class="bg-[#15803d] max-h-[91px]  py-5 flex justify-between text-white ">
@@ -64,11 +76,51 @@ generations.
   </div>
 </section>
 
-
-
-
     
     <main class="bg-[#f0fdf4]">
+<section class="mx-auto py-10 flex gap-6 max-w-[1650px]">
+
+<!-- Left Sidebar: Categories -->
+<aside class="p-4 w-72 bg-gray-100">
+  <h2 class="text-xl font-bold mb-4 text-black">Categories</h2>
+  <ul id="categoryContainer" class="space-y-2 text-black"></ul>
+</aside>
+
+<!-- Center: Plant Cards -->
+<div class="flex-grow">
+  <div id="cardContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+</div>
+
+<!-- Right: Cart -->
+<aside class="p-4 w-72 bg-white shadow rounded">
+      <h2 class="text-xl font-bold mb-4 text-black">Cart</h2>
+      <div id="cartContainer" class="space-y-2">
+        <!-- <p class="text-gray-500">Your cart is empty.</p> -->
+      </div>
+      <div class="mt-4 font-bold text-green-800">
+        Total: <span id="totalPrice">0</span>
+      </div>
+    </aside>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    <section class="bg-[#f0fdf4] py-16">
   <div class="max-w-7xl   mx-auto px-5">
 
@@ -176,12 +228,15 @@ generations.
 
   </div>
 </section>
+ 
+
 
 
 
 
 
     </main>
+    <script src="./script.js"></script>
 
 </body>
 </html>
