@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<style>
+    *{
+         font-family: "Inter", sans-serif;
+    }
+</style>
+</head>
+<body class="bg-blue-100">
+
+      <header>
+        <div class="bg-[#15803d] max-h-[91px]  py-5 flex justify-between text-white ">
+           <div class="ml-0 md:ml-[120px] font-bold">Green Earth</div>
+           <div class="">
+            <ul class=" justify-between hidden md:flex gap-5 ">
+                <li>About</li>
+                <li>Gallery</li>
+                <li>Planet a tree</li>
+            </ul>
+           </div>
+          <button class="mr-[120px] w-28 h-9 rounded-[999px] bg-[#facc15] text-green-700">Planet a tree</button>
+           
+            </div>
+        </div>
+        </header>
+    <section class="bg-[#cff0dc]">
+  <div class="grid grid-cols-3 items-end">
+
+    <!-- Left Image -->
+    <div class="flex justify-start ml-6">
+      <img src="./assets/hero-leaf1.png" 
+           alt="Left Image" 
+           class="h-full object-cover rounded-xl">
+    </div>
+
+    <!-- Center Content -->
+    <div class="flex flex-col justify-center items-center text-center py-10">
+      <h1 class="text-3xl md:text-5xl font-bold text-black">Plant a Tree, Grow a Future</h1>
+      <p class="mt-4 text-gray-700 text-lg max-w-md">
+        Join our mission to plant 1 million trees and make the Earth greener for future
+generations.
+      </p>
+      <button class="mt-6 px-6 py-3 bg-[#facc15] text-green-700 font-semibold rounded-full shadow-md hover:bg-yellow-400 transition">
+       Get Involved
+      </button>
+    </div>
+
+    <!-- Right Image -->
+    <div class="flex justify-end mr-4">
+      <img src="./assets/hero-leaf2.png" 
+           alt="Right Image" 
+           class="h-full object-cover rounded-xl">
+    </div>
+
+  </div>
+</section>
+
+
+
+
+    
+    <main class="bg-[#f0fdf4]">
+   <section class="bg-[#f0fdf4] py-16">
+  <div class="max-w-7xl   mx-auto px-5">
+
+    <!-- Heading -->
+    <h2 class="text-4xl md:text-5xl font-bold text-green-800 text-center mb-12">
+      About the Campaign
+    </h2>
+
+    <!-- Content: Left Image + Right Text -->
+    <div class="flex flex-col md:flex-row items-center md:items-center justify-center gap-10">
+
+      <!-- Left Image -->
+      <div class="md:w-1/2 flex justify-center">
+        <img src="./assets/about.png" alt="Campaign" class="rounded-xl shadow-lg w-full max-w-sm">
+      </div>
+
+     <!-- Right Text -->
+<div class="md:w-1/2 flex flex-col justify-center md:-ml-20">
+  <p class="text-gray-700  mb-4 text-center md:text-left">
+   Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.
+  </p>
+
+  <ul class="list-disc list-inside text-gray-700 space-y-2 text-center md:text-left">
+    <li>Restoration of natural habitats</li>
+    <li>Improvement of air quality</li>
+    <li>Spread awareness about environmental sustainability</li>
+  </ul>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#d1fae5] py-16">
+  <div class="max-w-7xl mx-auto px-5 text-center">
+
+    <!-- Heading -->
+    <h2 class="text-4xl md:text-5xl font-bold text-green-800 mb-12">
+      Our Impact
+    </h2>
+
+    <!-- Cards Container -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-15">
+
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
+        <h3 class="text-4xl font-extrabold text-green-700 mb-4">500k+</h3>
+        <p class="text-gray-700 text-center">
+          Trees Planted
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
+        <h3 class="text-4xl font-extrabold text-green-700 mb-4">120k+</h3>
+        <p class="text-gray-700 text-center">
+          Communities Involved
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
+        <h3 class="text-4xl font-extrabold text-green-700 mb-4">30+</h3>
+        <p class="text-gray-700 text-center">
+          Countries Reached
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#166534] py-16">
+  <div class="max-w-3xl mx-auto px-5">
+     <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
+        Plant a Tree Today
+      </h2>
+
+    <!-- Form Container: light green background -->
+    <div class="bg-[#22c55e]/20 rounded-xl p-8 md:p-12 shadow-lg">
+     
+
+      <form class="flex flex-col gap-4">
+
+        <!-- Name Input -->
+        <input type="text" placeholder="Your Name" 
+               class="w-full bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 border-none">
+
+        <!-- Email Input -->
+        <input type="email" placeholder="Your Email" 
+               class="w-full bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 border-none">
+
+        <!-- Number of Emails Input -->
+        <input type="number" placeholder="Number of Emails" 
+               class="w-full bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 border-none">
+
+        <!-- Submit Button -->
+        <button type="submit" class="mt-4 w-full py-3 bg-[#facc15] text-green-700 font-semibold rounded-full hover:bg-yellow-400 transition">
+          Subscribe
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+    </main>
+
+</body>
+</html>
