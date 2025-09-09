@@ -140,14 +140,13 @@ const showPlants = (plants) => {
   });
 };
 
-
 // Add to cart
 const addToCart = (id, name, price) => {
   const item = document.createElement("div");
   item.className = "border-b py-2";
 
   item.innerHTML = `
-    <div class="flex justify-between items-start">
+    <div class="flex justify-between items-start">       
       <div>
         <span class="font-bold">${name}</span>
         <p class="text-green-700">৳${price || 0}</p>
