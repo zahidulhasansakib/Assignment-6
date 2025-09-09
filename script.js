@@ -11,6 +11,26 @@ let totalPrice = 0;
 const showSpinner = () => spinner.classList.remove("hidden");
 const hideSpinner = () => spinner.classList.add("hidden");
 
+
+// Open Modal
+const openModal = (plant) => {
+  document.getElementById("modalTitle").textContent = plant.name || "No Name";
+  document.getElementById("modalImage").src = plant.image || "https://via.placeholder.com/200";
+  document.getElementById("modalDescription").textContent = plant.description || "No description available.";
+  document.getElementById("modalPrice").textContent = `৳${plant.price || 0}`;
+  document.getElementById("modalCategory").textContent = plant.category || plant.category_name || "Tree";
+
+  document.getElementById("modalContainer").classList.remove("hidden", "opacity-0");
+  document.getElementById("modalContainer").classList.add("flex");
+};
+
+
+// Close Modal
+const closeModal = () => {
+  document.getElementById("modalContainer").classList.add("hidden");
+};
+
+
 // Load Categories
 const loadCategory = () => {
   showSpinner();
@@ -87,7 +107,6 @@ const showPlants = (plants) => {
       ? plant.description.slice(0, 60) + "..."
       : "";
 
-    // Use category name for button
     const categoryName = plant.category || plant.category_name || "Tree";
 
     const div = document.createElement("div");
@@ -97,25 +116,31 @@ const showPlants = (plants) => {
       <img src="${imageURL}" alt="${plant.name || "Plant"}" 
            class="mx-auto mb-2 object-cover" 
            style="width:311.33px; height:186.8px;" />
-      <h3 class="font-bold text-sm">${plant.name || "No Name"}</h3>
-      <p class="text-gray-600 text-xs flex-grow">${desc}</p>
-     <div class="flex justify-between items-center mt-1">
-  <button class="text-xs px-3 py-1 bg-blue-100 text-green-600 rounded-full">
-    ${categoryName}
-  </button>
-  <span class="font-bold text-green-700 text-sm">৳${plant.price || 0}</span>
-</div>
 
-      <button class="mt-2 w-full bg-[#15803d] text-white rounded-md py-1 text-xs  transition" 
-              onclick="addToCart('${plant.id}', '${plant.name}', '${
-      plant.price || 0
-    }')">
+      <!-- 🔹 Tree Name Clickable for Modal -->
+      <h3 class="font-bold text-sm cursor-pointer text-green-700 hover:underline"
+          onclick='openModal(${JSON.stringify(plant)})'>
+        ${plant.name || "No Name"}
+      </h3>
+
+      <p class="text-gray-600 text-xs flex-grow">${desc}</p>
+
+      <div class="flex justify-between items-center mt-1">
+        <button class="text-xs px-3 py-1 bg-blue-100 text-green-600 rounded-full">
+          ${categoryName}
+        </button>
+        <span class="font-bold text-green-700 text-sm">৳${plant.price || 0}</span>
+      </div>
+
+      <button class="mt-2 w-full bg-[#15803d] text-white rounded-md py-1 text-xs transition" 
+              onclick="addToCart('${plant.id}', '${plant.name}', '${plant.price || 0}')">
         Add to Cart
       </button>
     `;
     cardContainer.appendChild(div);
   });
 };
+
 
 // Add to cart
 const addToCart = (id, name, price) => {
