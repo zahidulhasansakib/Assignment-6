@@ -16,7 +16,7 @@
     }
 </style>
 </head>
-<body class="bg-blue-100 flex flex-col min-h-screen">
+<body class="bg-blue-100 ">
 
 <!-- Spinner -->
 <div id="spinner" class="hidden fixed inset-0 flex justify-center items-center bg-white/50 z-50">
@@ -92,7 +92,7 @@
 
 
     
-    <main class="bg-[#f0fdf4] flex-grow">
+    <main class="bg-[#f0fdf4] ">
 <section class="mx-auto py-10 flex flex-col md:flex-row gap-6 max-w-[1650px]">
 
   <!-- Left Sidebar: Categories -->
@@ -178,15 +178,15 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-15">
 
       <!-- Card 1 -->
-      <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
-        <h3 class="text-4xl font-extrabold text-green-700 mb-4">500k+</h3>
+      <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center  hover:bg-green-200">
+        <h3 class="text-4xl font-extrabold text-green-700 mb-4 ">500k+</h3>
         <p class="text-gray-700 text-center">
           Trees Planted
         </p>
       </div>
 
       <!-- Card 2 -->
-      <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
+      <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center  hover:bg-green-200">
         <h3 class="text-4xl font-extrabold text-green-700 mb-4">120k+</h3>
         <p class="text-gray-700 text-center">
           Communities Involved
@@ -194,7 +194,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
+      <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center  hover:bg-green-200">
         <h3 class="text-4xl font-extrabold text-green-700 mb-4">30+</h3>
         <p class="text-gray-700 text-center">
           Countries Reached
@@ -206,7 +206,7 @@
 </section>
 
 
-<!-- Modal Container -->
+
 <!-- Modal Container -->
 <div id="modalContainer" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50 p-4">
   <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm flex flex-col gap-3">
@@ -243,7 +243,7 @@
       </h2>
 
     <!-- Form Container: light green background -->
-    <div class="bg-[#22c55e]/20 rounded-xl p-8 md:p-12 shadow-lg">
+    <div class="bg-[#22c55e]/20 rounded-xl p-8 md:p-12 shadow-lg   w-full md:w-1/2 lg:w-2/3 mx-auto">
      
 
       <form class="flex flex-col gap-4">
@@ -257,12 +257,16 @@
                class="w-full bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 border-none">
 
         <!-- Number of Emails Input -->
-        <input type="number" placeholder="Number of Emails" 
-               class="w-full bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 border-none">
+      <select class="select  w-full  bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 border-none">
+  <option disabled selected>Number of Trees</option>
+  <option>1 Tree-$5</option>
+  <option>5 Tree-$25</option>
+  <option>10 Tree-$50</option>
+</select>
 
         <!-- Submit Button -->
         <button type="submit" class="mt-4 w-full py-3 bg-[#facc15] text-green-700 font-semibold rounded-full hover:bg-yellow-400 transition">
-          Subscribe
+          Donate Now
         </button>
 
       </form>

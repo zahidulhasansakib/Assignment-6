@@ -15,7 +15,7 @@ const hideSpinner = () => spinner.classList.add("hidden");
 // Open Modal
 const openModal = (plant) => {
   document.getElementById("modalTitle").textContent = plant.name || "No Name";
-  document.getElementById("modalImage").src = plant.image || "https://via.placeholder.com/200";
+  document.getElementById("modalImage").src = plant.image ;
   document.getElementById("modalDescription").textContent = plant.description || "No description available.";
   document.getElementById("modalPrice").textContent = `৳${plant.price || 0}`;
   document.getElementById("modalCategory").textContent = plant.category || plant.category_name || "Tree";
@@ -83,7 +83,7 @@ const loadPlantsByCategory = (categoryId = "", categoryName = "") => {
     .then((res) => res.json())
     .then((data) => {
       const plants = data.plants || data.data || [];
-      showPlants(plants, categoryName); // categoryName পাঠাচ্ছি
+      showPlants(plants, categoryName); 
       hideSpinner();
     })
     .catch((err) => {
@@ -104,8 +104,7 @@ const showPlants = (plants) => {
   plants.forEach((plant) => {
     const imageURL = plant.image || "https://via.placeholder.com/311x186";
     const desc = plant.description
-      ? plant.description.slice(0, 60) + "..."
-      : "";
+      ? plant.description.slice(0, 60) + "..."  : "";
 
     const categoryName = plant.category || plant.category_name || "Tree";
 
